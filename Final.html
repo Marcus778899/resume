@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊頁面</title>
+    <script>
+        function first() { //檢查第一碼是否為字母
+            if (isNaN(parseInt(IDnumber.charAt(0)))) {
+
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        function second() { //檢查第二碼是否為1 or 2
+            if (parseInt(IDnumber.charAt(1)) == 1 || parseInt(IDnumber.charAt(1)) == 2) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        function third() { //檢查後8碼是否為數字
+            var ID = parseInt(IDnumber.substring(2, 10))
+            if (isNaN(ID)) {
+                return false
+            }
+            else {
+                return true
+            }
+        }
+        let map = new Map([ //建立對照表
+            ["A", 10], ['B', 11], ['C', 12], ['D', 13], ['E', 14], ['F', 15], ['G', 16], ['H', 17], ['I', 34]
+            , ['J', 18], ['K', 19], ['L', 20], ['M', 21], ['N', 22], ['O', 35], ['P', 23], ['Q', 24], ['R', 25]
+            , ['S', 26], ['T', 27], ['U', 28], ['V', 29], ['W', 32], ['X', 30], ['Y', 31], ['Z', 33]
+        ])
+        function fourth() { //檢查最後一碼是否正確
+            var number = IDnumber.split('')
+            var check_number = 0
+            var long = [8, 7, 6, 5, 4, 3, 2, 1]
+            for (let i = 1; i <= 8; i++) {
+                check_number += number[i] * long[i - 1]
+            }
+            if (map.has(number[0])) {
+                var critial_value = map.get(number[0]).toString().split("")
+                check_number += critial_value[0] * 1 + critial_value[1] * 9
+            }
+            if (isNaN(number[9])) {
+                return false
+            }
+            if (check_number % 10 == (10 - parseInt(number[9])) % 10) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        function check() {
+            IDnumber = document.getElementById('idnumber').value;
+            IDnumber = IDnumber.charAt(0).toUpperCase() + IDnumber.substring(1);
+            document.querySelector("#idnumber").value = IDnumber;
+            if (first() == true && second() == true && third() == true && fourth() == true) {
+                IDnumber = IDnumber.charAt(0).toUpperCase() + IDnumber.substring(1);
+                alert("正確")
+            }
+            else {
+                alert("不正確")
+            }
+
+        }
+
+        // 以下是生日的部份 
+        function getYear() {
+            var txt = "<option value = '0'>請選擇</option>";
+            for (let i = 2023; i >= 1900; i--) {
+                txt += "<option value =" + i + ">" + i + "</option>"
+            }
+            document.querySelector("#year").innerHTML = txt;
+            var text = "<option value = '0'>請選擇</option>";
+            for (let i = 1; i <= 12; i++) {
+                text += "<option value =" + i + ">" + i + "</option>"
+            }
+            document.querySelector("#month").innerHTML = text;
+        }
+        function getDay() {
+            var texts = "<option value = '0'>請選擇</option>";
+            var yearFordays = document.querySelector("#year").value
+            var checkYear = false;
+            if (yearFordays % 4 == 0) {
+                checkYear = true;
+                if (yearFordays % 100 == 0) {
+                    checkYear = false;
+                    if (yearFordays % 400 == 0) {
+                        checkYear = true;
+                    }
+                }
+            }
+            var days = 0
+            if (checkYear == true) {
+                switch (parseInt(document.querySelector("#month").value)) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        days = 31
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        days = 30
+                        break;
+                    case 2:
+                        days = 29
+                }
+
+
+            }
+            else {
+                switch (parseInt(document.querySelector("#month").value)) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        days = 31
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        days = 30
+                        break;
+                    case 2:
+                        days = 28
+                }
+
+            }
+            for (let i = 1; i <= days; i++) {
+                texts += "<option value =" + i + ">" + i + "</option>"
+            }
+            document.querySelector("#day").innerHTML = texts;
+        }
+
+        //確認密碼
+        function checkpwd() {
+            var first = document.getElementById("pwd").value
+            var second = document.getElementById("pwdcheck").value
+            if (first == second) {
+                alert("輸入正確")
+            }
+            else {
+                alert("與密碼輸入不相符")
+            }
+        }
+    </script>
+    <style>
+        fieldset {
+            width: 500px;
+            margin-bottom: 10px;
+            border: 2px dotted peru;
+            border-radius: 3px;
+            margin: auto;
+            background-color: aliceblue;
+        }
+
+        legend {
+            color: red;
+            font-family: 標楷體;
+            background-color: bisque;
+            margin: auto;
+        }
+
+        .st1 {
+            width: 500px;
+            border-bottom: 2px dotted black;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .a1 {
+            width: 100px;
+            float: left;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body onload="getYear()" style="background-color:black">
+    <form action="#" method="get" enctype="application/x-www-form-urlencoded">
+        <fieldset style="border: 0;">
+            <fieldset>
+                <legend>註冊會員資料</legend>
+                <div class="st1">
+                    <label for="name" class="a1">會員名稱</label>
+                    <input type="text" id="name" name="Account">
+                </div>
+                <div class="st1">
+                    <label for="gender" class="a1">性別</label>
+                    <input type="radio" id="gender" name="Gender">男
+                    <input type="radio" id="gender" name="Gender">女
+                </div>
+                <div class="st1">
+                    <label for="dates" class="a1">生日</label>
+                    <select id="year"></select>
+                    <select id="month" onchange="getDay()"></select>
+                    <select id="day"></select>
+                </div>
+                <div class="st1">
+                    <label for="idnumber" class="a1">身分證字號</label>
+                    <input type="text" id="idnumber" name="ID" onblur="check()">
+                </div>
+                <div class="st1">
+                    <label for="tel" class="a1">電話</label>
+                    <input type="text" id="tel" name="phone">
+                </div>
+                <div class="st1">
+                    <label for="addr" class="a1">地址</label>
+                    <div id="twzipcode_ADV" class="twzipcode"></div>
+                    <input type="text" class="address" id="address" style="width: 350px;" />
+                </div>
+                <div class="st1">
+                    <label for="email" class="a1">電子郵件</label>
+                    <input type="text" id="email" name="Email">
+                </div>
+                <div class="st1">
+                    <label for="user" class="a1">帳號</label>
+                    <input type="text" id="user" name="User">
+                </div>
+                <div class="st1">
+                    <label for="pwd" class="a1">密碼</label>
+                    <input type="password" id="pwd" name="PWD">
+                </div>
+                <div class="st1">
+                    <label for="pwdcheck" class="a1">再次輸入密碼</label>
+                    <input type="password" id="pwdcheck" name="PWDcheck" onblur="checkpwd()">
+                </div>
+                <div style="text-align: center;">
+                    <input type="submit" value="送出">
+                    <input type="reset" value="清除">
+                </div>
+            </fieldset>
+        </fieldset>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-twzipcode@1.7.14/jquery.twzipcode.min.js"></script>
+    <script>
+        $("#twzipcode_ADV").twzipcode({
+            zipcodeIntoDistrict: true, // 郵遞區號自動顯示在地區
+            css: ["city form-control", "town form-control"] // 自訂 "城市"、"地區" class 名稱
+        });
+
+        $("#btn").click(function () {
+            $("#twzipcode_ADV").twzipcode("get", function (county, district, zipcode) {
+                let address = zipcode + county + district + $("#address").val();
+                $("#textarea").val(address);
+            });
+        });
+    </script>
+</body>
+
+</html>
