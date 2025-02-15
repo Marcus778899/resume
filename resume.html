@@ -1,216 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Resume</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <style>
-        /* Custom CSS to add space between image and text */
-        .masthead-content p {
-            margin-bottom: 20px;
-            /* Adjust this value to increase/decrease the space */
-            margin-left: 20px;
-        }
-
-        /* Custom CSS to style the masthead text */
-        .masthead-text {
-            margin-left: 20px;
-            /* Adjust this value to set the space between the image and text */
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="#page-top">Resume</a>
-            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
-                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
-                aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#about">關於我</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                            href="#contact">作品集</a></li>
-                </ul>
-            </div>
-
-        </div>
+<body>
+    <nav class="navbar">
+        <button class="nav-btn" onclick="showSection('intro')">自我介紹</button>
+        <button class="nav-btn" onclick="showSection('projects')">專案介紹</button>
     </nav>
-    <!-- Masthead-->
-    <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column text-left">
-            <h1 class="masthead-heading text-uppercase mb-0">Introduce</h1>
-            <!-- Masthead Avatar Image with Text on the Right -->
-            <div class="d-flex align-items-center masthead-content ">
-                <img class="masthead-avatar mb-5" src="assets/img/IMG_2772.JPG" alt="..." />
-                <p class="lead container text-left">
-                    我的學習背景涵蓋了統計學，這使我對數據分析和解讀數據有著深入的理解。透過資策會的大數據班培訓，我學習了如何運用各種數據分析工具和技術，主要擅長於數據處理、資料分析和視覺化等。
-                    在專題中，負責了資料爬取，以及標籤處理，使用工具為selenium和request的方法去蒐集資料，而在資料分析則是採用了scipy的統計套件以及matplotlib和seaborn做視覺化的呈現，以相關性檢定(Kendall
-                    Tau相關性檢定)來確立我們的特徵及目標向量是否有顯著相關，為機器學習的夥伴在挑選特徵時能夠有一定的依據。
-                    在過去的工作經驗中，我曾在中租迪擔任業務職位，這使我培養了與客戶溝通和需求分析的能力。同時，我也在康和公司擔任結算人員，這鍛煉了我細心處理數據以及判斷分析報告的能力。
-                    作為求職的數據分析師，我具備數據收集、清理、分析和呈現的能力，能夠為數據提取有價值的信息，提供決策支持。我熟練使用Python這項分析工具。
-                    我是一個積極學習和持續成長的人，致力於透過數據分析為企業帶來價值。我期待能夠在數據領域發揮所長。
-                </p>
-            </div>
-    </header>
 
-    <!-- About Section-->
-    <section class="page-section bg-white text-dark mb-0" id="about">
-        <div class="container">
-            <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase">工作經歷</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-dark">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
+    <section id="intro" class="section active">
+        <div class="resume">
+            <div class="info">
+                <div class="deco"></div>
+                <img src="assets/img/IMG_2772.JPG" alt="個人照片" class="avator">
+                <h1 class="name">XXX</h1>
+                <span class="jobPosition">數據分析師</span>
+                <ul class="contact">
+                    <li>example@gmail.com</li>
+                    <li>0912-345-678</li>
+                </ul>
+                <a class="btn" href="https://www.example.com" target="_blank">Portfolio</a>
+                <div class="pocket"></div>
             </div>
-            <!-- About Section Content-->
-            <div class="row">
-                <div class="col-lg-4 ms-auto">
-                    <p class="lead text-black">中租迪和企金業務</p>
-                    <ul>
-                        <li>主要負責企業金融業務推廣</li>
-                        <li>目標客群大部分中小傳統企業，其中以代工廠像是塑膠射出，鋼、銅.....等金屬初級加工場居多</li>
-                        <li>了解客戶經營型態(包含交期，銀行方面的貸款狀況、周轉率.......)，並在這些內容之中找尋可以切入我們業務的機會</li>
-                        <li>針對有需求的客戶產生企業報告書</li>
-                    </ul>
+            <div class="bgBlock">
+                <div class="block brief">
+                    <h4>ABOUT ME</h4>
+                    <h2>關於我</h2>
+                    <p>統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
+                        Tableau
+                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。</p>
                 </div>
-                <div class="col-lg-4 me-auto">
-                    <p class="lead text-black">康和綜合證券結算人員 </p>
-                    <ul>
-                        <li>每日報表結算</li>
-                        <li>客戶帳戶狀況檢核及處理</li>
-                        <li>融資券相關業務推廣</li>
-                        <li>財富管理需求客戶聯繫</li>
-                        <li>高風險，違約機率高的客戶要隨時關切資金水位及風險控管</li>
-                        <li>監控交易狀況以及洗錢防制</li>
-                    </ul>
-                    </P>
+                <div class="block">
+                    <h4>EDUCATION</h4>
+                    <h2>學歷</h2>
+                    <h3>XXX大學｜統計學系</h3>
+                    <span>2015 - 2019</span>
                 </div>
-            </div>
-            <div class="my-4"></div>
-            <!--技能-->
-            <!-- About Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase">學歷及技能</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom divider-dark">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <div></div>
-            <div></div>
-            <!-- About Section Content-->
-            <div class="row">
-                <div class="col-lg-4 ms-auto">
-                    <p class="lead text-black">學歷</p>
-                    <ul>
-                        <li>淡江大學統計系</li>
-                        <li>資展國際大數據班(原資策會)</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 me-auto">
-                    <p class="lead text-black">技能</p>
-                    <ul>
-                        <li>Python(資料分析)</li>
-                        <li>Tableau</li>
-                        <li>Git</li>
-                        <li>爬蟲(Request,Selenium)</li>
-                        <li>Linux(Hadoop,Docker,Spark)</li>
-                        <li>資料庫(MySQL,Sqlite,pymySQL)</li>
-                        <li>Flask</li>
-                        <li>網頁(html,css,javascript)</li>
-                        <li>Java</li>
+                <div class="block">
+                    <h4>SUMMARY</h4>
+                    <h2>專業技能</h2>
+                    <ul class="list listSummary">
+                        <li>Python, SQL, Flask, Tableau</li>
+                        <li>爬蟲 (Requests, Selenium)</li>
+                        <li>Linux, Docker, Spark</li>
+                        <li>數據分析與視覺化</li>
+                        <li>機器學習基礎</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Section-->
-    <section class="page-section bg-primary" id="contact">
-        <div class="container">
-            <!-- Contact Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Github</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <!-- Contact Section Form-->
-            <div class="row justify-content-center">
-                <div class="col-md-2"> <!-- 使用 col-md-6 來實現兩個元素並排 -->
-                    <a href="https://github.com/Marcus778899/webScraping.git" class="text-secondary">Web Scraping</a>
-                </div>
-                <div class="col-md-2"> <!-- 使用 col-md-6 來實現兩個元素並排 -->
-                    <a href="https://github.com/Marcus778899/machineLearning.git" class="text-secondary">Machine
-                        Learning</a>
-                </div>
-                <div class="col-md-2"> <!-- 使用 col-md-6 來實現兩個元素並排 -->
-                    <a href="https://github.com/Marcus778899/MRTCrowdFlow.git" class="text-secondary">MRT crowdflow
-                        Analysis</a>
-                </div>
-                <div class="col-md-2"> <!-- 使用 col-md-6 來實現兩個元素並排 -->
-                    <a href="https://github.com/Marcus778899/leaflet.git" class="text-secondary">Leaflet地圖服務</a>
-                </div>
-            </div>
+
+    <section id="projects" class="section">
+        <h1>專案介紹</h1>
+        <div class="project">
+            <h2>Web Scraping</h2>
+            <p>統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
+                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。</p>
+        </div>
+        <div class="project">
+            <h2>Machine Learning</h2>
+            <p>資料分析及模型訓練，使用 Scipy 和 Seaborn 進行視覺化。</p>
+        </div>
+        <div class="project">
+            <h2>MRT Crowd Flow Analysis</h2>
+            <p>地鐵人流分析，結合 Tableau 進行數據呈現。</p>
         </div>
     </section>
-    <!-- Footer-->
-    <footer class="footer text-center">
-        <div class="container">
-            <div class="row">
-                <!-- Footer Location-->
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Cellphone</h4>
-                    <p class="lead mb-0">
-                        0903671355
-                    </p>
-                </div>
-                <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">E-mail</h4>
-                    <a class="lead mb-0" href="mailto:s09203647@gmail.com">
-                        s09203647@gmail.com
-                    </a>
-                </div>
-                <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">Linkedin</h4>
-                    <a class="lead mb-0" href="https://www.linkedin.com/in/%E8%81%96%E5%80%AB-%E6%9E%97-807788284/">
-                        https://www.linkedin.com
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+    <script src="./js/scripts.js"></script>
 </body>
 
 </html>
