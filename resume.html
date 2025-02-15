@@ -10,78 +10,161 @@
 
 <body>
     <nav class="navbar">
-        <button class="nav-btn" onclick="showSection('intro')">自我介紹</button>
+        <button class="nav-btn active" onclick="showSection('intro')">自我介紹</button>
         <button class="nav-btn" onclick="showSection('projects')">專案介紹</button>
     </nav>
 
     <section id="intro" class="section active">
-        <div class="resume">
-            <div class="info">
-                <div class="deco"></div>
-                <img src="assets/img/IMG_2772.JPG" alt="個人照片" class="avator">
-                <h1 class="name">XXX</h1>
-                <span class="jobPosition">數據分析師</span>
-                <ul class="contact">
-                    <li>example@gmail.com</li>
-                    <li>0912-345-678</li>
-                </ul>
-                <a class="btn" href="https://www.example.com" target="_blank">Portfolio</a>
-                <div class="pocket"></div>
+        <div id="inner-nav"></div>
+        <div id="container">
+            <div id="profile">
+                <div id="image">
+                    <img id="profile-photo" src="./assets/img/IMG_2772.JPG" alt="Profile-Image">
+                    <a href="#"><i class="fas fa-pen stroke-transparent"></i></a>
+                </div>
+                <p id="name">林聖倫 Marcus Lin<br>
+                    <span id="email"><a href="mailto:s09203647@gmail.com">s09203647@gmail.com</a></span>
+                </p>
+                <p id="designation">Data engineer<br><span id="college">Tamkang University</span></p>
+                <div id="social-links">
+                    <a href="#"><i class="fab fa-facebook-f stroke-transparent"></i></a>
+                    <a><i class="fab fa-twitter stroke-transparent"></i></a>
+                    <a><i class="fab fa-linkedin-in stroke-transparent"></i></a>
+                    <a><i class="fab fa-github stroke-transparent"></i></a>
+                </div>
+                <a id="edit-intro" href="#"><i class="fas fa-pen-alt blue"></i>INTRO</a>
+                <hr width="100%">
+                <div id="about">
+                    <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+                </div>
+                <p id="year-graduation">Expected Year of Graduation<br><strong>June, 2019</strong></p>
+                <p id="education">Education<br><strong>Statistical analysis and information processing
+                        capabilities</strong></p>
+                <p id="more-about">More about me<br><span>資策會[巨量資料分析]</span></p>
+                <p id="telephone">Telephone<br><strong>+886-903-671-355</strong></p>
+                <p>Github: <strong><a href="https://github.com/Marcus778899">Marcus778899</a></strong></p>
+                <p>Linkedin: <strong><a href="https://www.linkedin.com/in/%E8%81%96%E5%80%AB-%E6%9E%97-807788284/">林聖倫
+                            (Marcus)</a></strong>
+                </p>
             </div>
-            <div class="bgBlock">
-                <div class="block brief">
-                    <h4>ABOUT ME</h4>
-                    <h2>關於我</h2>
-                    <p>統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合
-                        Tableau
-                        進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。</p>
+            <div id="info-cards">
+                <div class="card">
+                    <h2><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;關於我</h2>
+                    <a>
+                        在成為工程師之前，我擁有四年多的金融業經驗，主要負責推廣公司商品並控管交易風險。在這段時間，我不僅學到了業務運作和風險管理的知識，還提升了與客戶及同事之間的溝通和協作能力。轉型為工程師後，我保持著對學習新事物的熱情，並且在解決問題時善於運用邏輯思維來設計與實現創新的解決方案。
+                    </a>
                 </div>
-                <div class="block">
-                    <h4>EDUCATION</h4>
-                    <h2>學歷</h2>
-                    <h3>XXX大學｜統計學系</h3>
-                    <span>2015 - 2019</span>
+                <div class="card">
+                    <h2><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;工作經歷
+                    </h2>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;一元素科技股份有限公司</h3>
+                    <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;<strong>大數據工程師</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <p class="tags">建立和維護穩健的數據管道和數據庫，開發後端應用程序以促進API的集成，增強模型預測，並實現高效的前端數據傳輸。</p>
+                            <a class="edit" href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+                        </li>
+                        <li>
+                            <p class="tags">通過設計和實施腳本自動化內部報告流程，將BOM規格轉換為標準化的工廠格式，自動化腳本能夠有效減少三天份人力</p>
+                            <a class="edit" href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+                        </li>
+                        <li>
+                            <p class="tags">深入研究和評估開源工具，包括Kubernetes、Hadoop和GitLab
+                                CI/CD，以提升團隊生產力。編寫一些tutorial，使工程團隊能夠有效實施和使用這些工具。</p>
+                            <a class="edit" href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;康和綜合證券</h3>
+                    <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;<strong>專員</strong>
+                    <ul>
+                        <li>
+                            <p class="tags">客戶聯繫與協助業務推廣</p>
+                            <a class="edit" href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+                        </li>
+                        <li>
+                            <p class="tags">客戶風險查核及檢視每日異常交易</p>
+                            <a class="edit" href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+                        </li>
+                        <li>
+                            <p class="tags">洗錢防制</p>
+                            <a class="edit" href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="block">
-                    <h4>SUMMARY</h4>
-                    <h2>專業技能</h2>
-                    <ul class="list listSummary">
-                        <li>Python, SQL, Flask, Tableau</li>
-                        <li>爬蟲 (Requests, Selenium)</li>
-                        <li>Linux, Docker, Spark</li>
-                        <li>數據分析與視覺化</li>
-                        <li>機器學習基礎</li>
+                <div class="card">
+                    <h2><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;技術領域</h2>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料庫</h3>
+                    <ul>
+                        <li>
+                            <a>OLTP: MySQL, MariaDB, PostgerSQL</a>
+                        </li>
+                        <li>
+                            <a>NoSQL: Cassandra, Redis</a>
+                        </li>
+                        <li>
+                            <a>OLAP: Clickhouse</a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料預處理</h3>
+                    <ul>
+                        <li>
+                            <a>Python, PySpark</a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料流</h3>
+                    <ul>
+                        <li>
+                            <a>即時: Kafka</a>
+                        </li>
+                        <li>
+                            <a>批次: Hadoop, Hive</a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;容器化操作應用程序</h3>
+                    <ul>
+                        <li>
+                            <a>Docker, Kubernetes</a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;後端(Restful API)</h3>
+                    <ul>
+                        <li>
+                            <a>Python: Fastapi, Flash</a>
+                        </li>
+                        <li>
+                            <a>Java: Spring-boot</a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;後端(Restful API)</h3>
+                    <ul>
+                        <li>
+                            <a>Python: Fastapi, Flash</a>
+                        </li>
+                        <li>
+                            <a>Java: Spring-boot</a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;工作排程</h3>
+                    <ul>
+                        <li>
+                            <a>Apache Airflow, Linux Corntab</a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;自動化</h3>
+                    <ul>
+                        <li>
+                            <a>GitLab CI/CD</a>
+                        </li>
+                        <li>
+                            <a>Linux Shell Script</a>
+                        </li>
+                    </ul>
+                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;版本控制</h3>
+                    <ul>
+                        <li>
+                            <a>Git, GitHub</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -90,26 +173,80 @@
 
     <section id="projects" class="section">
         <h1>專案介紹</h1>
-        <div class="project">
-            <h2>Web Scraping</h2>
-            <p>統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。統計背景，擅長數據分析、視覺化及爬蟲技術。具有豐富的數據處理經驗，能夠使用 Python、SQL 等工具進行數據分析，並結合 Tableau
-                進行數據視覺化。熱愛學習新技術，並持續提升自己的專業能力。</p>
-        </div>
-        <div class="project">
-            <h2>Machine Learning</h2>
-            <p>資料分析及模型訓練，使用 Scipy 和 Seaborn 進行視覺化。</p>
-        </div>
-        <div class="project">
-            <h2>MRT Crowd Flow Analysis</h2>
-            <p>地鐵人流分析，結合 Tableau 進行數據呈現。</p>
+        <div class="projects-container">
+            <div class="project">
+                <h2>超純水即時水質預測</h2>
+                <ul>
+                    <li>
+                        <p>使用ClickHouse來架設資料庫並優化資料讀取效能，透過ClickHouse提供的高效查詢模型，提升資料存取速度和效能。</p>
+                    </li>
+                    <li>
+                        <p>
+                            使用Python Flask框架開發API，將預測模型與前端Dashboard進行串接，實現即時資料預測功能。同時，前端頁面會回傳相關的操作日志資料至資料庫，進行後續分析與處理。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Shell Script，自動化日常流程，資料庫定期更新，無停機重啟程式，保證服務的高可用性和穩定性。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="project">
+                <h2>晶圓蝕刻偵測</h2>
+                <ul>
+                    <li>
+                        <p>利用Redis作為資料緩存系統，實現高效的資料讀取與回傳。將頻繁存取的資料存儲在Redis中，提升整體系統效能。</p>
+                    </li>
+                    <li>
+                        <p>
+                            設計並實作JWT 驗證機制，保證使用者在註冊、登入及後續操作中的安全性。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            使用FastAPI來構建後端API，與前端進行資料互動串接。利用FastAPI的高效能特性，保證系統在高並發情況下仍能保持低延遲並確保數據流順暢和即時性。
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            設計客戶端登入系統，並透過安全的API與資料庫進行數據交換。
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="project">
+                <h2>Finance project with Telegram bot</h2>
+                <ul>
+                    <li>
+                        <p>以Fastapi為核心，建立Telegram bot與客戶端進行互動</p>
+                    </li>
+                    <li>
+                        <p>
+                            利用Apache Airflow完成定期抓取資料及匯入資料的功能
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            利用matplotlib建立分析圖片供Telegram bot調用
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            完整log記錄程式以利追蹤
+                        </p>
+                    </li>
+                    <li>
+                        <p>容器化以方便部屬及維護(Dockerfile)</p>
+                    </li>
+                    <li>
+                        <p>
+                            心靈雞湯產生器
+                        </p>
+                    </li>
+                </ul>
+                <a href="https://t.me/Marcus_First_Bot">[機器人連結]</a>
+            </div>
         </div>
     </section>
 

@@ -1,13 +1,13 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+html {
+  font-family: 'Open Sans', sans-serif;
+  background: whitesmoke;
 }
 
 .navbar {
   background: #333;
   padding: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-btn {
@@ -19,6 +19,11 @@ body {
   font-size: 16px;
 }
 
+.nav-btn.active {
+  background-color: #097bbf;
+  color: white;
+}
+
 .section {
   display: none;
   padding: 20px;
@@ -28,151 +33,62 @@ body {
   display: block;
 }
 
-.cv-layout {
+#container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+}
+
+#profile {
+  flex: 15%;
+  text-align: left;
+  margin: 20px;
+}
+
+#info-cards {
+  flex: 55%;
   text-align: left;
 }
 
-.profile-pic {
-  width: 150px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-/* 整體樣式 */
-.resume {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.info {
-  flex: 1;
-  padding: 20px;
-  text-align: center;
-  background: #f9f9f9;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-
-.info .avator {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+.card {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: white;
   margin-bottom: 20px;
 }
 
-.info .name {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.info .jobPosition {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.info .contact {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-}
-
-.info .contact li {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 5px;
-}
-
-.info .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.bgBlock {
-  flex: 2;
-  padding: 20px;
-}
-
-.block {
-  margin-bottom: 30px;
-}
-
-.block h4 {
-  font-size: 14px;
-  color: #999;
-  margin-bottom: 5px;
-}
-
-.block h2 {
-  font-size: 20px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.block h3 {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.block span {
-  font-size: 14px;
-  color: #666;
-}
-
-.block p {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-}
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.list li {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 5px;
+.projects-container {
+  max-width: 800px;
+  margin: auto;
 }
 
 .project {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   background: #f4f4f4;
   padding: 15px;
-  margin: 10px;
+  margin: 10px 0;
   border-radius: 8px;
-  text-align: left;
 }
 
-@media (max-width: 600px) {
-  .cv-layout {
-    flex-direction: column;
+@media screen and (max-width: 850px) {
+  #container {
+    display: block;
+  }
+
+  #profile {
+    width: 90%;
+    margin: auto;
     text-align: center;
   }
 
-  .profile-pic {
-    margin-right: 0;
-    margin-bottom: 10px;
+  .card {
+    margin: 0 5%;
   }
+}
 
-  .info {
-    text-align: center;
-  }
+#profile-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
 }
