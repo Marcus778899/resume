@@ -85,7 +85,11 @@ html {
   margin: auto;
 }
 
+/* 專案介紹區塊的 CSS 調整 */
 .project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   background: #f4f4f4;
   padding: 15px;
@@ -94,10 +98,46 @@ html {
 }
 
 .project img {
-  max-width: 100%;
+  max-width: 30%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.project img:active {
+  transform: scale(1.5);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.project-content {
+  flex: 1;
+  text-align: left;
+}
+
+/* 技術領域區塊的獨立 CSS */
+.tech-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tech-card {
+  width: calc(33.33% - 10px);
+  /* 每行 3 個，減去間距 */
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
+  overflow-x: hidden;
+  margin-bottom: 5px;
+  padding: 15px 30px 30px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  /* 加一點圓角讓視覺更柔和 */
 }
 
 @media screen and (max-width: 900px) {
@@ -109,6 +149,20 @@ html {
 
 @media screen and (max-width: 600px) {
   .project-card {
+    width: 100%;
+    /* 變成一個一排 */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .tech-card {
+    width: calc(50% - 20px);
+    /* 變成兩個一排 */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tech-card {
     width: 100%;
     /* 變成一個一排 */
   }
