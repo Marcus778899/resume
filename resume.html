@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人履歷</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <title>Resume</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <nav class="navbar">
         <button class="nav-btn active" onclick="showSection('intro')">自我介紹</button>
-        <button class="nav-btn" onclick="showSection('projects')">專案介紹</button>
+        <button class="nav-btn" onclick="showSection('projects')">專案經歷</button>
     </nav>
 
     <section id="intro" class="section active">
@@ -23,33 +24,32 @@
                     <a href="#"><i class="fas fa-pen stroke-transparent"></i></a>
                 </div>
                 <p id="name">林聖倫 Marcus Lin<br>
-                    <span id="email"><a href="mailto:s09203647@gmail.com">s09203647@gmail.com</a></span>
                 </p>
-                <p id="designation">Data engineer<br><span id="college">Tamkang University</span></p>
+                <p id="designation">大數據工程師<br><span id="college">淡江大學</span></p>
                 <div id="social-links">
                     <a href="#"><i class="fab fa-facebook-f stroke-transparent"></i></a>
-                    <a><i class="fab fa-twitter stroke-transparent"></i></a>
-                    <a><i class="fab fa-linkedin-in stroke-transparent"></i></a>
-                    <a><i class="fab fa-github stroke-transparent"></i></a>
+                    <a href="https://www.linkedin.com/in/%E8%81%96%E5%80%AB-%E6%9E%97-807788284/">
+                        <i class="fab fa-linkedin-in stroke-transparent">Linkedin</i>
+                    </a>
+                    <br>
+                    <a href="https://github.com/Marcus778899"><i class="fab fa-github stroke-transparent">Github</i></a>
                 </div>
-                <a id="edit-intro" href="#"><i class="fas fa-pen-alt blue"></i>INTRO</a>
+                <h3 id="edit-intro"><i class="fas fa-pen-alt blue"></i>Information</h3>
                 <hr width="100%">
                 <div id="about">
                     <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
                 </div>
-                <p id="year-graduation">Expected Year of Graduation<br><strong>June, 2019</strong></p>
-                <p id="education">Education<br><strong>Statistical analysis and information processing
-                        capabilities</strong></p>
+                <p id="year-graduation">畢業<br><strong>June, 2019</strong></p>
+                <p id="education">專長<br><strong>統計分析以及資料處理</strong></p>
                 <p id="more-about">More about me<br><span>資策會[巨量資料分析]</span></p>
-                <p id="telephone">Telephone<br><strong>+886-903-671-355</strong></p>
-                <p>Github: <strong><a href="https://github.com/Marcus778899">Marcus778899</a></strong></p>
-                <p>Linkedin: <strong><a href="https://www.linkedin.com/in/%E8%81%96%E5%80%AB-%E6%9E%97-807788284/">林聖倫
-                            (Marcus)</a></strong>
+                <p id="telephone">電話<br><strong>+886-903-671-355</strong></p>
+                <p id="telephone">Email<br><a href="mailto:s09203647@gmail.com"><strong>s09203647@gmail.com</strong></a>
                 </p>
             </div>
             <div id="info-cards">
                 <div class="card">
-                    <h2><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;關於我</h2>
+                    <h2><i class="fas fa-briefcase stroke-transparent"></i>&nbsp;&nbsp;&nbsp;關於我</h2
+                        class="about-me-content">
                     <a>
                         在成為工程師之前，我擁有四年多的金融業經驗，主要負責推廣公司商品並控管交易風險。在這段時間，我不僅學到了業務運作和風險管理的知識，還提升了與客戶及同事之間的溝通和協作能力。轉型為工程師後，我保持著對學習新事物的熱情，並且在解決問題時善於運用邏輯思維來設計與實現創新的解決方案。
                     </a>
@@ -94,85 +94,104 @@
                 </div>
                 <div class="card">
                     <h2><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;技術領域</h2>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料庫</h3>
-                    <ul>
-                        <li>
-                            <a>OLTP: MySQL, MariaDB, PostgerSQL</a>
-                        </li>
-                        <li>
-                            <a>NoSQL: Cassandra, Redis</a>
-                        </li>
-                        <li>
-                            <a>OLAP: Clickhouse</a>
-                        </li>
-                    </ul>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料預處理</h3>
-                    <ul>
-                        <li>
-                            <a>Python, PySpark</a>
-                        </li>
-                    </ul>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料流</h3>
-                    <ul>
-                        <li>
-                            <a>即時: Kafka</a>
-                        </li>
-                        <li>
-                            <a>批次: Hadoop, Hive</a>
-                        </li>
-                    </ul>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;容器化操作應用程序</h3>
-                    <ul>
-                        <li>
-                            <a>Docker, Kubernetes</a>
-                        </li>
-                    </ul>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;後端(Restful API)</h3>
-                    <ul>
-                        <li>
-                            <a>Python: Fastapi, Flash</a>
-                        </li>
-                        <li>
-                            <a>Java: Spring-boot</a>
-                        </li>
-                    </ul>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;後端(Restful API)</h3>
-                    <ul>
-                        <li>
-                            <a>Python: Fastapi, Flash</a>
-                        </li>
-                        <li>
-                            <a>Java: Spring-boot</a>
-                        </li>
-                    </ul>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;工作排程</h3>
-                    <ul>
-                        <li>
-                            <a>Apache Airflow, Linux Corntab</a>
-                        </li>
-                    </ul>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;自動化</h3>
-                    <ul>
-                        <li>
-                            <a>GitLab CI/CD</a>
-                        </li>
-                        <li>
-                            <a>Linux Shell Script</a>
-                        </li>
-                    </ul>
-                    <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;版本控制</h3>
-                    <ul>
-                        <li>
-                            <a>Git, GitHub</a>
-                        </li>
-                    </ul>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料庫</h3>
+                        <ul>
+                            <li>
+                                <a>OLTP: MySQL, MariaDB, PostgerSQL</a>
+                            </li>
+                            <li>
+                                <a>NoSQL: Cassandra, Redis</a>
+                            </li>
+                            <li>
+                                <a>OLAP: Clickhouse</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料預處理</h3>
+                        <ul>
+                            <li>
+                                <a>Python, PySpark</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;資料流</h3>
+                        <ul>
+                            <li>
+                                <a>即時: Kafka</a>
+                            </li>
+                            <li>
+                                <a>批次: Hadoop, Hive</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;容器化操作應用程序</h3>
+                        <ul>
+                            <li>
+                                <a>Docker, Kubernetes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;後端(Restful
+                            API)</h3>
+                        <ul>
+                            <li>
+                                <a>Python: Fastapi, Flash</a>
+                            </li>
+                            <li>
+                                <a>Java: Spring-boot</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;後端(Restful
+                            API)</h3>
+                        <ul>
+                            <li>
+                                <a>Python: Fastapi, Flash</a>
+                            </li>
+                            <li>
+                                <a>Java: Spring-boot</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;工作排程</h3>
+                        <ul>
+                            <li>
+                                <a>Apache Airflow, Linux Corntab</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;自動化</h3>
+                        <ul>
+                            <li>
+                                <a>GitLab CI/CD</a>
+                            </li>
+                            <li>
+                                <a>Linux Shell Script</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="project-card">
+                        <h3><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;版本控制</h3>
+                        <ul>
+                            <li>
+                                <a>Git, GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="projects" class="section">
-        <h1>專案介紹</h1>
         <div class="projects-container">
             <div class="project">
                 <h2>超純水即時水質預測</h2>
@@ -246,6 +265,8 @@
                     </li>
                 </ul>
                 <a href="https://t.me/Marcus_First_Bot">[機器人連結]</a>
+                <br>
+                <img src="./assets/img/telegram.jpg">
             </div>
         </div>
     </section>

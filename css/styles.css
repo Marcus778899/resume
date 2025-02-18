@@ -51,10 +51,33 @@ html {
 }
 
 .card {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  background: white;
-  margin-bottom: 20px;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
+  overflow-x: hidden;
+  margin-bottom: 30px;
+  padding: 15px 30px 30px 30px;
+  background-color: #fff;
+}
+
+.project-card {
+  width: calc(33.33% - 20px);
+  /* 每行 3 個，減去間距 */
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .1);
+  overflow-x: hidden;
+  margin-bottom: 30px;
+  padding: 15px 30px 30px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  /* 加一點圓角讓視覺更柔和 */
+}
+
+.about-me-content {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-left: 30px;
+  /* 讓內容與標題圖標對齊 */
+  padding-left: 10px;
+  /* 微調內容與左邊的間距 */
 }
 
 .projects-container {
@@ -68,6 +91,27 @@ html {
   padding: 15px;
   margin: 10px 0;
   border-radius: 8px;
+}
+
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .project-card {
+    width: calc(50% - 20px);
+    /* 變成兩個一排 */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-card {
+    width: 100%;
+    /* 變成一個一排 */
+  }
 }
 
 @media screen and (max-width: 850px) {
